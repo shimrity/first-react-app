@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MultiText(prop)
+export default function Text(prop)
 {
     const {inc ,val} = prop;
     function handleChangeVal(e) {

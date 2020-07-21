@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MultiText from './MultiText';
+import Text from './Text';
 import { useState } from 'react';
 
 import '../css/main.css';
@@ -15,10 +15,11 @@ const App = () => {
   return (
     <div>
       <h1>Enter text:</h1>
-     <MultiText val={valu} inc={inc}/> <br/>
-     <MultiText val={valu} inc={inc}/> <br/>
-     <MultiText val={valu} inc={inc}/> <br/>
-      <lable>{valu}</lable>
+     <Text val={valu} inc={inc}/> <br/>
+     <Text val={valu} inc={inc}/> <br/>
+     <Text val={valu} inc={inc}/> <br/>
+     <Text val={valu} inc={inc}/>
+     
      
     </div>
   )
