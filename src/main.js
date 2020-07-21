@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Hello W!!!!rrr!</h1>
+      <h1>Hello W!!!!rr!</h1>
     </div>
   )
 };
