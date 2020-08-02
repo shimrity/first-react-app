@@ -1,62 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SortableTable from './sortable-table ';
 
-import { useState } from 'react';
 
 import '../css/main.css';
-
+const data = [
+  ['id', 'Name', 'Country', 'Email'],
+  [0, 'dan', 'Israel', 'dan@gmail.com'],
+  [1, 'dana', 'Israel', 'dana@gmail.com'],
+  [2, 'anna', 'Israel', 'anna@gmail.com'],
+  [3, 'zina', 'UK', 'zina@gmail.com'],
+];
 const App = () => {
-  const [isTimeToLay, setIsTimeToLayVal] = useState(false);
-  const [Msg, setMsgVal] = useState("");
-  const [RandomNum ,setRandomNum] = useState(Math.floor(Math.random() * 1000) + 1);
   
-  setTimeout(function(){
-    setIsTimeToLayVal(x => !x)
-   },5000);
-  
-
-  function TryGuess(e)
-  {
-    const elm = document.querySelector('.GuessNumber');
-    const GuessNum=Number(elm.value);
-    debugger;
-    if(GuessNum==RandomNum)
-      setMsgVal("You Did It!!!!!");// ==> "+ RandomNum);
-    else
-    {
-        if(GuessNum>RandomNum)
-        {
-          if(!isTimeToLay)
-            setMsgVal("Too Big ");//+ RandomNum + "------" + isTimeToLay);
-         else
-            setMsgVal("Too Small ");//+ RandomNum + "-----" + isTimeToLay);
-        }
-        else
-        {
-          if(isTimeToLay)
-            setMsgVal("Too Big ");//+ RandomNum + "------" + isTimeToLay);
-         else
-            setMsgVal("Too Small ");//+ RandomNum + "-----" + isTimeToLay);
-        }
-
-    }  
-
-  }
-  function Restart(e)
-  {
-    document.querySelector('.GuessNumber').value ='';    
-    setRandomNum(Math.floor(Math.random() * 1000) + 1);
-    setMsgVal("");
-    setisTimeToLayVal(false)
-  }
   return (
     <div>
-      <p>Guess Number:
-      <input type="number" className="GuessNumber"></input> 
-      <button onClick={TryGuess}>TryGuess</button></p>
-      <label>{Msg}</label>
-      <br/>
-      <button onClick={Restart}>Restart</button>
+      <SortableTable data={data}></SortableTable>
     </div>
   )
 };
