@@ -12,7 +12,7 @@ export default function SortableTable(props){
 
     }
     const header = data[0];
-    const footer= data.slice(1);
+    const footer= data.slice(1); 
     const [sortKey, setSortKey] = useState(0);
     
     _.sortBy(footer, row => row[sortKey]);

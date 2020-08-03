@@ -15,7 +15,7 @@ const App = () => {
   
   return (
     <div>
-      <SortableTable data={data}></SortableTable>
+      <SortableTable data={data}>b </SortableTable>
     </div>
   )
 };
